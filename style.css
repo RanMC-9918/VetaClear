@@ -1,0 +1,19 @@
+#vetaclearLogo {
+    width: 60%;
+    transition: opacity 0.5s;
+    padding: 6px;
+    padding-right: 9px;
+    padding-left: 9px;
+    border-radius: 10px;
+}
+
+#vetaclearLogo:hover {
+    
+    opacity: 40%;
+    
+}
+
+.wp-block-navigation-item__label{
+    margin-left: 10px;
+    margin-right: 10px;
+}
