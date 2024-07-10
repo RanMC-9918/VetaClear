@@ -1,10 +1,8 @@
 #vetaclearLogo {
     width: 60%;
     transition: opacity 0.5s;
-    padding: 6px;
-    padding-right: 9px;
-    padding-left: 9px;
-    border-radius: 10px;
+    padding: 0;
+    
 }
 
 #vetaclearLogo:hover {
@@ -17,3 +15,19 @@
     margin-left: 10px;
     margin-right: 10px;
 }
+
+.glow{
+    transition: all 1s;
+    text-shadow: 0px 0px 60px rgb(0, 0, 0);
+}
+
+.navbar{
+    background-color: rgb(221, 244, 255);
+    z-index: 1;
+}
+
+#cleaner{
+    
+    color:#87f1f1; 
+}
+
