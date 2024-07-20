@@ -31,3 +31,47 @@
     color:#87f1f1; 
 }
 
+.employees div img{
+    width: 70%;
+    margin-left: 10%;
+    border: solid 5px #3bcece;
+}
+
+.employees div{
+    
+
+}
+
+.employees{
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    margin-bottom: 4%;
+}
+
+.employee-name{
+    font-size: 3rem;
+    text-align: left;
+    text-indent: 5%;
+    width: 70%;
+    margin-left: 10%;
+    background-color: #87f1f1;
+    margin-bottom: 0;
+    border: solid 5px #3bcece;
+    border-bottom: 0;
+}
+
+@media (max-width: 500px){
+    
+    .employee-name{
+        font-size: 2rem;
+    }
+
+    .employees{
+        display: grid;
+        gap: 4rem;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 auto;
+    }
+}
