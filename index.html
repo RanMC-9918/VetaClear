@@ -2344,7 +2344,7 @@
                     <div class="wp-block-group part-header__section-left has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" style="padding-top:0px;padding-bottom:0px">
                         <nav style="font-size:14px;font-style:normal;font-weight:700;" class="has-text-color has-blue-alt-3-color wp-block-navigation has-neue-haas-grotesk-text-font-family is-layout-flex wp-block-navigation-is-layout-flex" aria-label="Header - Left">
                             <ul style="font-size:14px;font-style:normal;font-weight:700;" class="wp-block-navigation__container has-text-color has-blue-alt-3-color wp-block-navigation has-neue-haas-grotesk-text-font-family">
-                                <li style="font-size: 14px; margin: 0;" class=" wp-block-navigation-item  wp-block-navigation-link ">
+                                <li style="font-size: 14px; margin: 0;" class=" wp-block-navigation-item is-shown-desktop wp-block-navigation-link ">
                                     <a class="wp-block-navigation-item__content" href="https://vetaclear/about-us/">
                                         <span class="wp-block-navigation-item__label">About Us</span>
                                     </a>
@@ -2353,6 +2353,16 @@
                                 <li style="font-size: 14px;" class=" wp-block-navigation-item is-shown-desktop wp-block-navigation-link">
                                     <a class="wp-block-navigation-item__content" href="https://www.linkedin.com/company/vetaclear/">
                                         <span class="wp-block-navigation-item__label">Contact Us</span>
+                                    </a>
+                                </li>
+                                <li style="font-size: 14px;" class=" wp-block-navigation-item is-shown-desktop wp-block-navigation-link">
+                                    <a class="wp-block-navigation-item__content" href="https://www.linkedin.com/company/vetaclear/">
+                                        <span class="wp-block-navigation-item__label">Media</span>
+                                    </a>
+                                </li>
+                                <li style="font-size: 14px;" class=" wp-block-navigation-item is-shown-desktop wp-block-navigation-link">
+                                    <a class="wp-block-navigation-item__content" href="https://www.linkedin.com/company/vetaclear/">
+                                        <span class="wp-block-navigation-item__label">Projects</span>
                                     </a>
                                 </li>
                             </ul>
@@ -2370,7 +2380,44 @@
                     </div>
                     <div class="wp-block-group part-header__section-right has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" style="padding-top:0px">
                         <nav style="font-size:14px;font-style:normal;font-weight:600;" class="has-text-color has-blue-alt-3-color is-responsive items-justified-right wp-block-navigation is-content-justification-right is-layout-flex wp-container-core-navigation-is-layout-2 wp-block-navigation-is-layout-flex" aria-label="Header - Right" data-wp-interactive="core/navigation" data-wp-context='{"overlayOpenedBy":{"click":false,"hover":false,"focus":false},"type":"overlay","roleAttribute":"","ariaLabel":"Menu"}'>
-                            <button aria-haspopup="dialog" style="margin-right: 20%;" class="wp-block-navigation__responsive-container-open " data-wp-on--click="actions.openMenuOnClick" data-wp-on--keydown="actions.handleMenuKeydown">Menu</button>
+                            <button aria-haspopup="dialog" style="margin-right: 20%;" class="wp-block-navigation__responsive-container-open " data-wp-on--click="actions.openMenuOnClick" data-wp-on--keydown="actions.handleMenuKeydown"><img id="menu-button" width="30vw" src="menu.png"></button>
+                            <script type="text/javascript">
+                                const menuButton = document.getElementById('menu-button');
+                                let open = false
+                                menuButton.addEventListener("click", () => {
+
+                                    if(open)
+                                    {
+                                        menuButton.style.rotate = "0deg";
+                                        open = false;
+                                    }
+                                    else{
+                                        menuButton.style.rotate = "90deg";
+                                        open = true;
+                                        setTimeout(openModal(), 100)
+                                    }
+                                    
+                                    
+                                    
+                                    function openModal(){
+                                        let menu = document.getElementsByClassName(".menu-item")
+                                        for(let i = 0; i < menu.length; i++){
+                                            menu[i].style.display = "flex";
+                                        }
+                                    }
+                                    
+                                    
+                                })
+                            </script>
+                            <div class="menu-item">
+                                <a href="" class="menu-item">About Us</a>
+                                <a href="" class="menu-item">Contact Us</a>
+                                <a href="" class="menu-item">Media</a>
+                                <a href="" class="menu-item">Projects</a>
+                                <a href="" class="menu-item">Lake Okeechobee</a>
+                                <a href="" class="menu-item"></a>
+                            </div>
+
                             <div class="wp-block-navigation__responsive-container" id="modal-5" data-wp-class--has-modal-open="state.isMenuOpen" data-wp-class--is-menu-open="state.isMenuOpen" data-wp-watch="callbacks.initMenu" data-wp-on--keydown="actions.handleMenuKeydown" data-wp-on--focusout="actions.handleMenuFocusout" tabindex="-1">
                                 <div class="wp-block-navigation__responsive-close" tabindex="-1">
                                     <div class="wp-block-navigation__responsive-dialog" data-wp-bind--aria-modal="state.ariaModal" data-wp-bind--aria-label="state.ariaLabel" data-wp-bind--role="state.roleAttribute">
@@ -2380,14 +2427,14 @@
                                                 
                                                 <li style="font-size: 14px;" class=" wp-block-navigation-item is-shown-desktop wp-block-navigation-link">
                                                     <a class="wp-block-navigation-item__content" href="https://currentwater.org/news/">
-                                                        <span class="wp-block-navigation-item__label">TBD</span>
+                                                        <span class="wp-block-navigation-item__label">Lake Okeechobee</span>
                                                     </a>
                                                 </li>
                                                 
                                             </ul>
                                             <div class="wp-block-buttons has-custom-font-size has-small-font-size is-layout-flex wp-block-buttons-is-layout-flex">
-                                                <div class="wp-block-button is-hidden-mobile">
-                                                    <a class="wp-block-button__link has-white-base-color has-blue-base-background-color has-text-color has-background has-link-color wp-element-button" href="https://currentwater.org/donate/" style="border-style:none;border-width:0px;padding-top:14px;padding-right:var(--wp--preset--spacing--50);padding-bottom:14px;padding-left:var(--wp--preset--spacing--50)">Donate</a>
+                                                <div class="wp-block-button is-hidden-mobile" id="contribute-button">
+                                                    <a class="wp-block-button__link has-white-base-color has-blue-base-background-color has-text-color has-background has-link-color wp-element-button" href="https://currentwater.org/donate/" style="border-style:none;border-width:0px;padding-top:14px;padding-right:var(--wp--preset--spacing--50);padding-bottom:14px;padding-left:var(--wp--preset--spacing--50)">Contribute</a>
                                                 </div>
                                             </div>
                                             
